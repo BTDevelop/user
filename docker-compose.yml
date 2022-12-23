@@ -1,5 +1,12 @@
 version: '2'
 services:
+  web:
+    build: C:\Users\onurc\OneDrive\Desktop\merve\hexaworks-jnr\v1\Dockerfile
+    ports:
+      - "3000:3000"
+    links:
+      - kafka
+      - zookeeper  
 # Zookeeper, single node
   zookeeper:
     image: wurstmeister/zookeeper:latest
