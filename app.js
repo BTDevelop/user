@@ -1,5 +1,5 @@
 const express = require("express");
-const mongoose = require("mongoose");
+//const mongoose = require("mongoose");
 const CreateUser = require('./controllers/create-user')
 
 const UsersRouter = require('./routes/users-router')
@@ -11,20 +11,22 @@ app.use("/uploads", express.static(__dirname + "/uploads"))
 
 require("dotenv").config();
 
-mongoose.set("strictQuery", false);
-
+// mongoose.set("strictQuery", false);
+/*
 mongoose
-  .connect('mongodb://192.168.254.103:27018/hexaworks', {
+  .connect('mongodb+srv://onur:1234@cluster0.jwdf7qh.mongodb.net/?retryWrites=true&w=majority', {
     useUnifiedTopology: true,
   })
   .then(() => {
     console.log("connected to mongodb");
   })
   .then(() => {
+*/
     app.listen(3000, () => {
       console.log("Server is running");
     });
-  })
+  /*})
   .catch((err) => {
     console.log(err);
   });
+  */
