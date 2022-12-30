@@ -1,0 +1,4 @@
+Database=>Index
+Table=>Type
+column=>Field
+Row>Document
